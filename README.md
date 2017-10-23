@@ -10,7 +10,7 @@ This project assumes your project directory is located within this folder, and t
 ~ $ mv myProjectDirectory cs31-checker/
 ~ $ cd cs31-checker
 ~/cs31-checker/ $ sudo pip install yaml
-~/cs31-checker/ $ ~ python verify.py config.yaml
+~/cs31-checker/ $ python verify.py config.yaml
 ```
 
 ### Config file template
