@@ -1,0 +1,69 @@
+---
+dir: Assignment2
+files:
+    - fare.cpp
+    - hw.txt
+    - report.txt
+compile:
+    - fare.cpp
+compiler: clang++
+template: "Age of rider: Student? (y/n): Destination: Number of zone boundaries crossed: ---\nThe fare to ~0 is ~1"
+tests:
+-   file: fare
+    in: '12y \nSomeDest\n0'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '15n \nSomeDest\n0'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '12n \nSomeDest\n1'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '17y \nSomeDest\n1'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '12n \nSomeDest\n2'
+    out: ['SomeDest', '$2.45']
+-   file: fare
+    in: '12y \nSomeDest\n2'
+    out: ['SomeDest', '$2.45']
+-   file: fare
+    in: '9y \nSomeDest\n6'
+    out: ['SomeDest', '$4.65']
+-   file: fare
+    in: '18y \nSomeDest\n0'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '18y \nSomeDest\n1'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '18y \nSomeDest\n2'
+    out: ['SomeDest', '$2.45']
+-   file: fare
+    in: '18n \nSomeDest\n0'
+    out: ['SomeDest', '$1.35']
+-   file: fare
+    in: '21n \nSomeDest\n1'
+    out: ['SomeDest', '$1.90']
+-   file: fare
+    in: '28n \nSomeDest\n2'
+    out: ['SomeDest', '$2.45']
+-   file: fare
+    in: '65y \nSomeDest\n0'
+    out: ['SomeDest', '$0.45']
+-   file: fare
+    in: '65y \nSomeDest\n1'
+    out: ['SomeDest', '$0.65']
+-   file: fare
+    in: '65y \nSomeDest\n2'
+    out: ['SomeDest', '$1.05']
+-   file: fare
+    in: '65n \nSomeDest\n0'
+    out: ['SomeDest', '$0.45']
+-   file: fare
+    in: '65n \nSomeDest\n1'
+    out: ['SomeDest', '$0.80']
+-   file: fare
+    in: '65n \nSomeDest\n2'
+    out: ['SomeDest', '$1.05']
+...

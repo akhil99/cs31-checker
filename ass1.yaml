@@ -1,0 +1,23 @@
+---
+dir: Assignment1
+files:
+    - original.cpp
+    - logic_error.cpp
+    - compile_error.cpp
+    - report.txt
+compile:
+    - original.cpp
+    - logic_error.cpp
+compiler: clang++
+template: "How many people were surveyed? How many of them approve of the way the president is handling his job? How many of them disapprove of the way the president is handling his job? \n~0 say they approve.\n~1 say they disapprove.\nMore people ~2."
+tests:
+-   file: original
+    in: '10 10 0'
+    out: ['100.0%', '0.0%', 'approve than disapprove']
+-   file: original
+    in: '20 15 5'
+    out: ['75.0%', '25.0%', 'approve than disapprove']
+-   file: original
+    in: '20 5 15'
+    out: ['25.0%', '75.0%', 'disapprove than approve']
+...

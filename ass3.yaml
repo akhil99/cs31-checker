@@ -1,0 +1,29 @@
+---
+dir: Assignment3
+files:
+    - keyboard.cpp
+    # - report.txt
+compile:
+    - keyboard.cpp
+compiler: clang++
+template: "s~0b~1\n~2"
+tests:
+-   file: keyboard
+    in: '\n'
+    out: ['0', '0','']
+-   file: keyboard
+    in: '//\n'
+    out: ['0', '0','  ']
+-   file: keyboard
+    in: 'C/C/G/G/A/A/G/\n'
+    out: ['0', '0','GGLLQQL']
+-   file: keyboard
+    in: 'D3/F#3/A3/D4//D3F#3A3D4/'
+    out: ['0', '0','.8DH [.8DH]']
+-   file: keyboard
+    in: 'G3B3DD5//G/A/A3B/C5/B3D5//G//G//CE5//C5/D5/E5/F#5/B3G5//G//G/'
+    out: ['0', '0','[SFHR] LQ[DW]E[FR] L L [GT] ERT*[FU] L L']
+-   file: keyboard
+    in: 'DADDA/'
+    out: ['0', '0','[HQHHQ]']
+...
